@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LCOaaHfJlD2eMqsbCbx6AFNE2JF0v4e8aKax6Vn+IY8=",
+  "Hash": "tWmPGhy9r81iBwh8ToDe6teaXOTgGjhJeOM95ohsGZM=",
   "Source": "Capstone_Olapp",
   "BasePath": "_content/Capstone_Olapp",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\bgpic.png",
+      "SourceId": "Capstone_Olapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\",
+      "BasePath": "_content/Capstone_Olapp",
+      "RelativePath": "lib/bgpic.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bgpic.png"
     },
     {
       "Identity": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -1069,23 +1086,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\low-poly-grid-haikei.svg",
-      "SourceId": "Capstone_Olapp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\",
-      "BasePath": "_content/Capstone_Olapp",
-      "RelativePath": "lib/low-poly-grid-haikei.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\low-poly-grid-haikei.svg"
     }
   ]
 }

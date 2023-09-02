@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\bgpic.png",
+      "PackagePath": "staticwebassets\\lib\\bgpic.png"
+    },
+    {
       "Id": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
@@ -243,10 +247,6 @@
     {
       "Id": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\wwwroot\\lib\\low-poly-grid-haikei.svg",
-      "PackagePath": "staticwebassets\\lib\\low-poly-grid-haikei.svg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Capstone_Olapp.Microsoft.AspNetCore.StaticWebAssets.props",

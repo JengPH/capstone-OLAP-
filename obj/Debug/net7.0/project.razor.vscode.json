@@ -24060,11 +24060,6 @@
       "FilePath": "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Views\\Admin\\PartialLogin\\LoginIndex.cshtml",
-      "TargetPath": "Views\\Admin\\PartialLogin\\LoginIndex.cshtml",
-      "FileKind": "mvc"
     }
   ]
 }

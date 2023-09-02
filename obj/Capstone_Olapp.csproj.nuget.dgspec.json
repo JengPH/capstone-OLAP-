@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj": {}
+    "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj": {
+    "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj",
+        "projectUniqueName": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj",
         "projectName": "Capstone_Olapp",
-        "projectPath": "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj",
+        "projectPath": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\Capstone_Olapp.csproj",
         "packagesPath": "C:\\Users\\Jeng\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Jeng\\Documents\\Capstone_Olapp\\obj\\",
+        "outputPath": "C:\\Users\\Jeng\\Documents\\Capstone_Olapp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
