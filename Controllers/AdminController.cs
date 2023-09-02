@@ -8,10 +8,14 @@ using Microsoft.Extensions.Logging;
 
 namespace Capstone_Olapp.Controllers
 {
-    public class PageController : Controller
+    [Route("[controller]/[action]")]
+    public class AdminController : Controller
     {
-        public ActionResult Backend(){
-            return View();
+        [HttpGet]
+        public IActionResult LoginIndex()
+        {
+            return View("PartialLogin/LoginIndex");
         }
+
     }
 }
