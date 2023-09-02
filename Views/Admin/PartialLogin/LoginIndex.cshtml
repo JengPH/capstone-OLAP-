@@ -1,5 +1,4 @@
 <div class="login-card">
-
     <h2>
         Login
     </h2>
@@ -7,9 +6,123 @@
         Please Enter Details
     </h3>
 
-    <form class="login-card">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
+    <form class="login-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
         <button type="submit">Sign In</button>
     </form>
 </div>
+
+<style>
+@@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/372579566_1237650296905924_5075673537109165336_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeF5rtfm6EboYLI-jgCrfza_wdFcyNosxJ3B0VzI2izEnWEMif0XEkHpgBRCCVDTcnkwwL8NtiyXFowYqqfteGMs&_nc_ohc=mPk-9m6YVAAAX-yydXz&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRjMf84aXwqpfP9DiMtjItvpo9bnSPVVD9bMicn98pv-g&oe=651A0899") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Ubuntu";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
+   
+}
+.login-card{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+    left: 360px;
+
+}
+.login-card > h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+
+}
+.login-card > h3{
+    color: rgba(0, 0, 0, 0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.login-form{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+.login-form > input, .login-form > button
+{
+    width: 100%;
+    height: 50px;
+}
+.login-form > input
+{
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+}
+.login-form > input:hover{
+    border: 2px solid #800000;
+}
+.login-form > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #c32148 ;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+.login-form > button:hover{
+    background: #b22222 ;
+}
+.login-form > a{
+    color: #8b0000 ;
+    font-size: 0.9rem;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: all 0.375s;
+}
+@@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+@@media (width >= 500px)
+{
+    body{
+        padding: 0;
+       
+    }
+    .login-card{
+        
+        margin: 0;
+        width: 400px;
+        
+    }
+}
+
+</style>
