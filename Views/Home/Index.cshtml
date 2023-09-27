@@ -1,8 +1,116 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="home-card">
+    <div class="home-form">
+        <div class="bglogo">
+            <img src="~/images/kaskweklogo.jpg" alt="">
+        </div>
+        <h2>KASKWEK</h2>
+        <button class="loginbutton">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </button>
+    </div>
 </div>
+
+<style>
+    *
+    {
+        box-sizing: border-box;
+    }
+    body {
+        display: grid;
+        place-items: center;
+        margin: 0;
+        padding: 0 24px;
+        background-image: url("../images/maroonbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: rotate 6s infinite alternate linear;
+    }
+
+    .home-card {
+        position: relative;
+        z-index: 3;
+        width: 50%;
+        margin: 0 20px;
+        padding: 70px 30px 44px;
+        border-radius: 1.25rem;
+        background: #fff;
+        text-align: center;
+        left: 270px;
+        top: 40px;
+        
+    }
+    h2{
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    left: 10px;
+    
+
+}
+
+    .home-form {
+        width: 100%;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+    }
+
+    .home-form > button {
+        width: 100%;
+        height: 50px;
+    }
+
+    .home-form > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #c32148 ;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+    .home-form>button:hover {
+        background: #b22222;
+    }
+
+    .bglogo {
+        position: relative;
+        display: flex;
+        width: 400px;
+        height: 300px;
+        left: 110px;
+
+
+    }
+
+    @@keyframes rotate {
+        100% {
+            background-position: 15% 50%;
+        }
+    }
+
+    @@media (width >=500px) {
+        body {
+            padding: 0;
+
+        }
+
+        .login-card {
+
+            margin: 0;
+            width: 400px;
+
+        }
+    }
+</style>
