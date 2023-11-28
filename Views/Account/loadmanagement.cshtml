@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplesidebar</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <img
+            src="../Sidebarngachuy/kaskweklogo.jpg"
+            style="width: 30px; height: 30px"
+          />
+          <span>Kaskwek</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <div class="user">
+        <!-- user image ari -->
+        <img class="user-img" src="../Sidebarngachuy/kaskweklogo.jpg" alt=" " />
+        <div>
+          <p class="bold">Username</p>
+          <p>ADMIN</p>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="bx bxs-dashboard"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="bx bxs-user-account"></i>
+            <span class="nav-item">User</span>
+          </a>
+          <span class="tooltip">Users</span>
+        </li>
+        <li>
+          <a href="loanmangement.html">
+            <i class="bx bx-money-withdraw"></i>
+            <span class="nav-item">Loan</span>
+          </a>
+          <span class="tooltip">Loan Management</span>
+        </li>
+        <li>
+          <a href="Payments.html">
+            <i class="bx bx-receipt"></i>
+            <span class="nav-item">Payment</span>
+          </a>
+          <span class="tooltip">Payment Management</span>
+        </li>
+        <li>
+          <a href="reports.html">
+            <i class="bx bxs-report"></i>
+            <span class="nav-item">Reports</span>
+          </a>
+          <span class="tooltip">Reports</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-log-out"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <!-- Button to open the modal -->
+<button id="openModalButton">
+  <i class='bx bxs-calculator'></i>
+</button>
+      <div class="wizard-container">
+        <div class="wizard-header">Loan Wizard</div>
+        <div id="step1" class="wizard-step active">
+            <h2>Step 1: Personal Information</h2>
+            <form>
+              <label for="user">Select User:</label>
+              <select id="user" onchange="populateUserDetails()">
+                  <option value="john">John Doe</option>
+                  <option value="jane">Jane Smith</option>
+                  <!-- Add more options as needed -->
+              </select>
+
+              <label for="name">Name:</label>
+              <input type="text" id="name" disabled>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" disabled>
+
+              <label for="address">Address:</label>
+              <input type="text" id="address" disabled>
+  
+              <label for="gender">Gender:</label>
+              <input type="text" id="gender" disabled>
+  
+              <label for="dob">Date of Birth:</label>
+              <input type="text" id="dob" disabled>
+
+              <button type="button" class="next" onclick="nextStep()">Next</button>
+          </form>
+        </div>
+        <div id="step2" class="wizard-step">
+            <h2>Step 2: Loan Details</h2>
+            <form>
+                <label for="amount">Loan Amount:</label>
+                <input type="number" id="amount" placeholder="Enter Loan Amount" required>
+
+                <label for="term">Loan Term:</label>
+                <input type="number" id="term" placeholder="Enter Loan Term" required>
+
+                <button type="button" class="prev" onclick="prevStep()">Previous</button>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+
+      
+
+
+</div>
+        
+    </div>
+  </body>
+  <style>
+    body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.wizard-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.wizard-header {
+    text-align: center;
+    color: #2e86de;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.wizard-step {
+    display: none;
+}
+
+.wizard-step.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 10px;
+    flex: 1 0 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input,
+select {
+    flex: 1 0 60%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    display: inline-block;
+  
+}
+
+button:hover {
+    background-color: #1a5276;
+}
+
+#openModalButton{
+  position: relative;
+  width:50px;
+  height: 50px;
+  top: 550px;
+  left: 1050px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Add a subtle animation for the modal */
+@@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply the animation to the modal content */
+.modal-content {
+    animation: fadeIn 0.3s;
+}
+
+
+    h1 {
+      text-align: center;
+      color: #0b3762;
+      margin-top: 20px;
+    }
+
+    .calculator {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #2e86de;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      
+    }
+
+    button:hover {
+      background-color: #1a5276;
+    }
+
+    #result {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+    #result th, #result td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    }
+  </style>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+      sidebar.classList.toggle("active");
+    };
+
+    //wizard ui javascript
+    let currentStep = 1;
+
+function nextStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    currentStep++;
+
+    const nextStepElement = document.getElementById(`step${currentStep}`);
+    nextStepElement.classList.add('active');
+}
+function prevStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    currentStep--;
+
+    const prevStepElement = document.getElementById(`step${currentStep}`);
+    prevStepElement.classList.add('active');
+}
+
+
+function populateUserDetails() {
+    const userDropdown = document.getElementById('user');
+    const selectedUser = userDropdown.value;
+
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const addressField = document.getElementById('address');
+    const genderField = document.getElementById('gender');
+    const dobField = document.getElementById('dob');
+
+    // Set details based on the selected user
+    switch (selectedUser) {
+        case 'john':
+            nameField.value = 'John Doe';
+            emailField.value = 'john@example.com';
+            addressField.value = '123 Main St, Anytown';
+            genderField.value = 'Male';
+            dobField.value = '1985-05-15';
+            break;
+        case 'jane':
+            nameField.value = 'Jane Smith';
+            emailField.value = 'jane@example.com';
+            addressField.value = '456 Oak Ave, Anycity';
+            genderField.value = 'Female';
+            dobField.value = '1990-08-22';
+            break;
+        // Add cases for more users as needed
+    }
+}
+
+function submitForm() {
+    alert('Loan submitted successfully!');
+    // You can add logic to submit the form data to your server here
+}
+
+    //loan calculator modal javascript
+    document.addEventListener('DOMContentLoaded', function() {
+    const openModalButton = document.getElementById('openModalButton');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const loanCalculatorModal = document.getElementById('loanCalculatorModal');
+
+    // Open the modal
+    openModalButton.addEventListener('click', function() {
+        loanCalculatorModal.style.display = 'block';
+    });
+
+    // Close the modal
+    closeModalButton.addEventListener('click', function() {
+        loanCalculatorModal.style.display = 'none';
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === loanCalculatorModal) {
+            loanCalculatorModal.style.display = 'none';
+        }
+    });
+});
+
+
+    //loan calculator javascript
+    document.addEventListener('DOMContentLoaded', function() {
+    const calculateButton = document.getElementById('calculate');
+    const result = document.getElementById('result');
+    const resultBody = document.getElementById('result-body');
+
+    calculateButton.addEventListener('click', calculateLoan);
+
+    function calculateLoan() {
+        const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+        const annualInterestRate = parseFloat(document.getElementById('annual-interest-rate').value) / 100;
+        const loanTerm = parseFloat(document.getElementById('loan-term').value);
+        const paymentFrequency = document.getElementById('payment-frequency').value;
+        const startDate = new Date(document.getElementById('start-date').value);
+        const currentDate = new Date();
+
+        // Calculate the number of payment periods
+        let numPayments = 0;
+        switch (paymentFrequency) {
+            case 'weekly':
+                numPayments = loanTerm * 52;
+                break;
+            case 'monthly':
+                numPayments = loanTerm * 12;
+                break;
+            case 'yearly':
+                numPayments = loanTerm;
+                break;
+        }
+
+        // Calculate the periodic interest rate
+        const periodicInterestRate = annualInterestRate / numPayments;
+
+        // Calculate the periodic payment amount
+        const r = 1 + periodicInterestRate;
+        const n = numPayments;
+        const periodicPayment = (loanAmount * (r ** n) * periodicInterestRate) / ((r ** n) - 1);
+
+        // Calculate payment schedule
+        let paymentSchedule = '';
+        for (let i = 0; i < numPayments; i++) {
+            const paymentDate = new Date(startDate);
+            if (paymentFrequency === 'weekly') {
+                paymentDate.setDate(paymentDate.getDate() + 7 * i);
+            } else if (paymentFrequency === 'monthly') {
+                paymentDate.setMonth(paymentDate.getMonth() + i);
+            } else if (paymentFrequency === 'yearly') {
+                paymentDate.setFullYear(paymentDate.getFullYear() + i);
+            }
+
+            const paymentAmount = periodicPayment.toFixed(2);
+            // paymentSchedule += `Payment ${i + 1}: ${paymentAmount} ₱ on ${paymentDate.toDateString()}<br>`;
+          paymentSchedule += `<tr><td>${i + 1}</td> <td>${paymentAmount}</td><td> ${paymentDate.toDateString()}</td></tr>`;
+        }
+
+        //result.innerHTML = paymentSchedule;
+        resultBody.innerHTML = paymentSchedule;
+    }
+});
+
+  </script>
+</html>

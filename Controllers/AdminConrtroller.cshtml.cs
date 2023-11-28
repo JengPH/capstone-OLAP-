@@ -39,6 +39,11 @@ namespace Capstone_Olapp.Controllers
             return View("MainDashboard");
         }
 
+        public IActionResult Payments(){
+
+            return View("Payments");
+        }
+
 
 
     }

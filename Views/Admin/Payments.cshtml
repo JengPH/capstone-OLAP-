@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplesidebar</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="../Sidebarngachuy/kaskweklogo.jpg"style="width:30px;height:30px">
+                <span>Kaskwek</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <!-- user image ari -->
+            <img class="user-img" src="../Sidebarngachuy/kaskweklogo.jpg" alt=" ">
+            <div>
+                <p class="bold">Username</p>
+                <p>ADMIN</p>
+            </div> 
+        </div>
+    
+    <ul>
+        <li>
+            <a href="index.html">
+                <i class='bx bxs-dashboard'></i>
+                <span class="nav-item">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="user.html">
+                <i class='bx bxs-user-account'></i>
+                <span class="nav-item">User</span>
+            </a>
+            <span class="tooltip">Users</span>
+        </li>
+        <li>
+            <a href="loanmangement.html">
+                <i class='bx bx-money-withdraw'></i>
+                <span class="nav-item">Loan</span>
+            </a>
+            <span class="tooltip">Loan Management</span>
+        </li>
+        <li>
+            <a href="Payments.html">
+                <i class='bx bx-receipt'></i>
+                <span class="nav-item">Payment</span>
+            </a>
+            <span class="tooltip">Payment Management</span>
+        </li>
+        <li>
+            <a href="reports.html">
+                <i class='bx bxs-report' ></i>
+                <span class="nav-item">Reports</span>
+            </a>
+            <span class="tooltip">Reports</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-log-out'></i>
+                <span class="nav-item">Logout</span>
+            </a>
+            <span class="tooltip">Logout</span>
+        </li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="container">
+        <h1>Payments</h1>
+    </div>
+</div>
+
+</body>
+
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function()
+    {
+        sidebar.classList.toggle('active')
+    }
+</script>
+</html>
